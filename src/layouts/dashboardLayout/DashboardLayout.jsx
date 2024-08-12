@@ -2,6 +2,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import './dashboardLayout.css'
 import { useAuth } from '@clerk/clerk-react';
 import { useEffect } from 'react';
+import ChatList from '../../components/chatList';
 const DashboardLayout = () => {
 
     const {userId,isLoaded}=useAuth();
@@ -9,7 +10,7 @@ const DashboardLayout = () => {
     const navigate=useNavigate();
     useEffect(()=>{
         if (isLoaded && !userId){
-            navigate("/signin/*");
+            navigate("/signin");
         }
     },[isLoaded,userId, navigate]);
 
@@ -17,7 +18,7 @@ const DashboardLayout = () => {
 
   return (
     <div className="dashboardLayout">
-        <div className="menu">MENU</div>
+        <div className="menu"><ChatList/></div>
         <div className="content">
             <Outlet/>
         </div>

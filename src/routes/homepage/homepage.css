@@ -7,7 +7,7 @@
 
     @media screen and (max-width: 1024px) {
         flex-direction: column;
-        gap: 0;
+        gap:0px;
         overflow-y: scroll;
     }
 
@@ -25,11 +25,19 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+
+
+            @media screen and (max-width: 1280px) {
+                font-size:64px ;
+            }
         }
 
         h3 {
             font-weight: 400;
             max-width: 78%;
+            @media screen and (max-width: 1024px) {
+                max-width: 100%;
+            }
         }
 
         a {
@@ -98,6 +106,12 @@
                 padding: 20px;
                 background-color: #2c2937;
                 border-radius: 10px;
+                @media screen and (max-width: 1024px) {
+                    display: none;
+                }
+                @media screen and (max-width: 1280px) {
+                    right: 0;
+                }
 
                 img {
                     width: 32px;
