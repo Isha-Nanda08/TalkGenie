@@ -7,7 +7,7 @@ import DashboardPage from "./routes/dashboardPage/DashboardPage";
 import ChatPage from "./routes/chat/chatpg";
 import RootLayout from "./layouts/rootLayout/RootLayout";
 import DashboardLayout from "./layouts/dashboardLayout/DashboardLayout";
-import SignInPage from "./routes/signInPage/signInPage";
+import SignInPage from "./routes/signin/signInPage";
 import SignUpPage from "./routes/signUpPage/signUpPage";
 
 const router = createBrowserRouter([
